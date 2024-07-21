@@ -6,12 +6,3 @@ body {
     height: 100vh;
     width: 100vw;
 }
-
-@font-face {
-    font-family: 'Open Sans';
-    src: url('./font/OpenSans.ttf');
-}
-
-header {
-    background-color: red;
-}
