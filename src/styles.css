@@ -5,4 +5,10 @@
 body {
     height: 100vh;
     width: 100vw;
+    font-family: 'Open Sans', 'Helvetica', sans-serif;
+}
+
+@font-face {
+    src: url('./font/OpenSans.ttf');
+    font-family: 'Open Sans';
 }
