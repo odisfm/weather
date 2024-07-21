@@ -1,5 +1,8 @@
 :root {
     font-size: 16px;
+
+    --brand-colour: #365d80;
+    --brand-colour-dark: #1d2e43;
 }
 
 body {
@@ -51,4 +54,19 @@ header {
             color: var(--brand-colour);
         }
     }
+}
+
+#content {
+    background-color: #eee;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#loading {
+    padding: 3rem;
+    background-color: deeppink;
+    width: 50%;
+    margin-top: 1rem;
 }
