@@ -12,3 +12,43 @@ body {
     src: url('./font/OpenSans.ttf');
     font-family: 'Open Sans';
 }
+
+header {
+    background-color: var(--brand-colour);
+    padding: 1.5rem 3rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+
+    #logo-box {
+        display: flex;
+        align-items: center;
+        gap: .6rem;
+
+        #logo {
+            fill: white;
+            height: 50px;
+        }
+
+        #logotype {
+            font-size: 1.7rem;
+            margin-top: .3rem;
+        }
+    }
+
+    #unit-switch {
+        border: none;
+        padding: .5rem 1rem;
+        margin-left: auto;
+        border-radius: .2rem;
+        background-color: var(--brand-colour-dark);
+        color: #fff;
+        font-weight: 600;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #fff;
+            color: var(--brand-colour);
+        }
+    }
+}
