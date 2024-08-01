@@ -1,3 +1,3 @@
 Made during The Odin Project
 
-[Live Demo]{https://odisfm.github.io/weather)
+[Live Demo](https://odisfm.github.io/weather)
