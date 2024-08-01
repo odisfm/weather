@@ -4,6 +4,8 @@ import sampleData from "./sample.json";
 const APIkey = 'QL3R75L9V9YT7HQNE67K6AM79';
 const useSample = false;
 
+import { location } from "./main";
+
 export default async function fetchWeatherData(location) {
 
     function stripDay(day, currentDay) {
@@ -15,7 +17,8 @@ export default async function fetchWeatherData(location) {
             precipprob = currentDay.precipprob;
             conditions = currentDay.conditions;
         }
-        let object = {  datetimeEpoch, tempmax, tempmin, temp, feelslike, humidity, precipprob, conditions, description };
+        let icon = day.icon.replaceAll('-', '_')
+        let object = {  datetimeEpoch, tempmax, tempmin, temp, feelslike, humidity, precipprob, conditions, description, icon };
         object.day = formatDate(new Date(day.datetimeEpoch * 1000), 'EEEE');
         if (currentDay){
             //object.hours = day.hours;
@@ -40,6 +43,14 @@ export default async function fetchWeatherData(location) {
         return Promise.reject(error)
     }
     const data = await response.json();
+
+    console.log(data)
+
+    localStorage.setItem('location', data.resolvedAddress)
+
+    let locationName = data.resolvedAddress.split(',')[0]
+
+    document.querySelector('#location-heading').textContent = locationName
 
     const week = []
 

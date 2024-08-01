@@ -131,3 +131,6 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+/src/sample.json
+/src/sampleCurrent.json
+/src/sampleDay.json
