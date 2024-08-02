@@ -1,8 +1,6 @@
 import {format as formatDate} from "date-fns/format";
-import sampleData from "./sample.json";
 
 const APIkey = 'QL3R75L9V9YT7HQNE67K6AM79';
-const useSample = false;
 
 import { location } from "./main";
 
@@ -31,12 +29,8 @@ export default async function fetchWeatherData(location) {
         return object;
     }
 
-    if (useSample === true) {
-        console.log('Returning sample data')
-
-        return stripDay(sampleData.days[0], sampleData.currentConditions)
-    }
     let response;
+
     try {
         response = await fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?unitGroup=metric&key=${APIkey}&contentType=json`)
     } catch (error) {
