@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # User
 
 
@@ -135,3 +136,8 @@ out
 /src/sampleCurrent.json
 /src/sampleDay.json
 /.idea/
+=======
+/.idea/misc.xml
+/.idea/vcs.xml
+/.idea/workspace.xml
+>>>>>>> origin/gh-pages
