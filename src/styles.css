@@ -5,11 +5,17 @@
     --brand-colour-dark: #1d2e43;
 }
 
+html {
+    height: 100vh;
+}
+
 body {
-    height: max(100vh, 100%);
+    min-height: 100%;
     width: 100vw;
     font-family: 'Open Sans', 'Helvetica', sans-serif;
     background-color: var(--brand-colour);
+    display: flex;
+    flex-direction: column;
 }
 
 @font-face {
