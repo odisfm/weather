@@ -170,9 +170,8 @@ header {
 
     #weather-forecast {
         grid-area: forecast;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: flex-start;
+        display: grid;
+        grid-template-columns: repeat( auto-fit, minmax(200px, 1fr) );
         gap: 1rem;
 
         .weather-card {
